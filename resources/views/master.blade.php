@@ -9,8 +9,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </head>
 <body>
-    {{View::make('header')}}
+    {{ View::make('header') }}
     @yield('content')
-    {{View::make('footer')}}
+    {{ View::make('footer') }}
 </body>
-</html>
+<style>
+    img.slider-img{
+        height: 400px;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: black;
+        border-radius: 50%;
+    }
+    .custom-product {
+        height: 600px;
+    }
+    .slider-text {
+        background-color: #35443585 !important;
+    }
+    .trending-image {
+        height: 100px;
+    }
+    .trending-item {
+        float: left;
+        width: 20%;
+    }
+    .trending-wrapper {
+        margin: 30px;
+    }
+</style>
