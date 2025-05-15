@@ -22,15 +22,22 @@
         background-color: black;
         border-radius: 50%;
     }
-    .custom-product {
-        height: 600px;
-    }
+    
     .slider-text {
         background-color: #35443585 !important;
     }
     .trending-image {
-        height: 100px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
     }
+
+    .product-card:hover {
+        transform: translateY(-4px);
+        transition: 0.3s ease;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
     .trending-item {
         float: left;
         width: 20%;
@@ -38,4 +45,9 @@
     .trending-wrapper {
         margin: 30px;
     }
+    .detail-img {
+    max-height: 400px;
+    object-fit: contain;
+    }
+
 </style>

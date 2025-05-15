@@ -18,20 +18,20 @@
       </div>
 
       <!-- Remember Me Checkbox -->
-      <div class="form-check mb-3">
+    {{--  <div class="form-check mb-3">
         <input class="form-check-input" type="checkbox" id="rememberMe">
         <label class="form-check-label" for="rememberMe">
           Remember me
         </label>
-      </div>
+      </div>--}}
 
       <!-- Submit Button -->
       <button type="submit" class="btn btn-primary w-100">Login</button>
 
       <!-- Forgot Password Link -->
-      <div class="mt-3 text-center">
+      {{-- <div class="mt-3 text-center">
         <a href="#">Forgot password?</a>
-      </div>
+      </div>--}}
     </form>
   </div>
 </div>

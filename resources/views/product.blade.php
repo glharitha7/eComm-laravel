@@ -13,13 +13,15 @@
         <!-- Carousel items -->
         <div class="carousel-inner">
             @foreach($products as $item)
-                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                    <img src="{{ $item['gallery'] }}" class="d-block slider-img" alt="{{ $item['name'] }}">
-                    <div class="carousel-caption d-none d-md-block slider-text">
-                        <h5>{{ $item['name'] }}</h5>
-                        <p>{{ $item['description'] }}</p>
+                <a href="detail/{{$item['id']}}">
+                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                        <img src="{{ $item['gallery'] }}" class="d-block slider-img" alt="{{ $item['name'] }}">
+                        <div class="carousel-caption d-none d-md-block slider-text">
+                            <h5>{{ $item['name'] }}</h5>
+                            <p>{{ $item['description'] }}</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             @endforeach
         </div>
 
@@ -34,16 +36,24 @@
         </button>
     </div>
 
-    <div class="trending-wrapper">
-        <h3>Trending Products</h3>
-        @foreach($products as $item)
-        <div class="trending-item">
-            <img class="trending-image" src="{{ $item['gallery'] }}" alt="Product image">
-            <div class="">
-                <h5>{{ $item['name'] }}</h5>
+    <div class="container mt-5">
+        <h3 class="mb-4">Trending Products</h3>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
+            @foreach($products as $item)
+            <div class="col">
+                <a href="detail/{{ $item['id'] }}" class="text-decoration-none text-dark">
+                    <div class="card h-100 shadow-sm border-0 product-card">
+                        <img src="{{ $item['gallery'] }}" class="card-img-top img-fluid trending-image" alt="{{ $item['name'] }}">
+                        <div class="card-body text-center">
+                            <h6 class="card-title mb-1">{{ $item['name'] }}</h6>
+                            <p class="card-text text-muted small">{{ \Illuminate\Support\Str::limit($item['description'], 50) }}</p>
+                        </div>
+                    </div>
+                </a>
             </div>
+            @endforeach
         </div>
-        @endforeach
     </div>
+
 </div>
 @endsection

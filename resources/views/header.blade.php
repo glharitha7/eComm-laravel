@@ -1,6 +1,13 @@
+<?php 
+use App\Http\Controllers\ProductController;
+$total = 0;
+if(Session::has('user')){
+  $total = ProductController::cartItem();
+}
+?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">E-Comm</a>
+    <a class="navbar-brand" href="/">E-Comm</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -22,12 +29,26 @@
         </li>
       </ul>
 
-      <div class="ms-auto">
+      <div class="ms-auto d-flex align-items-center">
         <a class="btn btn-outline-light" href="/cartlist">
           Cart
-          <span class="badge bg-light text-dark">{{ $cartItemCount ?? 0 }}</span>
+          <span class="badge bg-light text-dark">{{ $total ?? 0 }}</span>
         </a>
+
+        @if(Session::has('user'))
+          <div class="dropdown d-inline-block ms-3">
+            <button class="btn btn-outline-light dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ Session::get('user')['name'] ?? 'Account' }}
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="/logout">Logout</a></li>
+            </ul>
+          </div>
+        @else
+          <a class="btn btn-outline-light ms-3" href="/login">Login</a>
+        @endif
       </div>
+
     </div>
   </div>
 </nav>
