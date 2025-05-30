@@ -1,4 +1,5 @@
 <?php 
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\ProductController;
 $total = 0;
 if(Session::has('user')){
