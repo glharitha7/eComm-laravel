@@ -12,7 +12,7 @@
         <div class="col-lg-6 col-md-6 col-12">
             <a href="/" class="btn btn-outline-secondary mb-3">← Go Back</a>
             <h2 class="fw-bold">{{ $product['name'] }}</h2>
-            <h4 class="text-success mt-3 mb-2">Price: ₹{{ $product['price'] }}</h4>
+            <h4 class="text-success mt-3 mb-2">Price: ${{ $product['price'] }}</h4>
             <p class="text-muted mb-4">{{ $product['description'] }}</p>
 
             <div class="mb-3">

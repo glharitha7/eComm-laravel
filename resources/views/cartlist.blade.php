@@ -20,9 +20,9 @@
 
         <!-- Remove Button -->
         <div class="col-md-3 col-sm-3 col-12 text-sm-end text-start mt-2 mt-sm-0">
-        <a href="/removecart/{{$item->cart_id}}">
-            <button type="submit" class="btn btn-warning w-100 w-sm-auto">Remove from Cart</button>
-        </a>
+            <a href="/removecart/{{$item->cart_id}}">
+                <button type="submit" class="btn btn-warning w-100 w-sm-auto">Remove from Cart</button>
+            </a>
         </div>
     </div>
     @endforeach
