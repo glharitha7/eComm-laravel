@@ -35,7 +35,7 @@
                     </table>
 
                     <!-- Checkout Form -->
-                    <form action="ordernow" method="POST">
+                    <form action="/orderplace" method="POST">
                         @csrf
 
                         <!-- Shipping Address (Textarea) -->
