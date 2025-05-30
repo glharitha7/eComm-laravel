@@ -20,14 +20,19 @@
             </div>
 
             <!-- Actions -->
-            <div class="d-grid gap-2 d-md-block">
-                <form action="/add_to_cart" method="POST">
-                    @csrf
-                    <input type="hidden" name="product_id" value="{{$product['id']}}">
-                    <button class="btn btn-primary me-2">Add to Cart</button>
-                </form>
-                <button class="btn btn-success">Buy Now</button>
+            <div class="row g-3 mt-4">
+                <div class="col-12 col-md-auto">
+                    <form action="/add_to_cart" method="POST">
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{ $product['id'] }}">
+                        <button class="btn btn-primary w-100">Add to Cart</button>
+                    </form>
+                </div>
+                <div class="col-12 col-md-auto">
+                    <button class="btn btn-success w-100">Buy Now</button>
+                </div>
             </div>
+
         </div>
     </div>
 

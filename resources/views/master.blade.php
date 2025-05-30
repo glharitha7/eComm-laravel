@@ -14,9 +14,6 @@
     {{ View::make('footer') }}
 </body>
 <style>
-    img.slider-img{
-        height: 400px;
-    }
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         background-color: black;
@@ -26,10 +23,21 @@
     .slider-text {
         background-color: #35443585 !important;
     }
+    img.slider-img {
+        width: 100%;
+        height: 500px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        background-color: #f8f9fa; /* Light background to fill empty space */
+    }
+
     .trending-image {
-        height: 150px;
-        object-fit: cover;
-        border-radius: 8px 8px 0 0;
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        background-color: #f8f9fa;
+        border-radius: 8px;
     }
 
     .product-card:hover {

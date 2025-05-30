@@ -46,7 +46,7 @@
                         <img src="{{ $item['gallery'] }}" class="card-img-top img-fluid trending-image" alt="{{ $item['name'] }}">
                         <div class="card-body text-center">
                             <h6 class="card-title mb-1">{{ $item['name'] }}</h6>
-                            <p class="card-text text-muted small">{{ \Illuminate\Support\Str::limit($item['description'], 50) }}</p>
+                            <!-- <p class="card-text text-muted small">{{ \Illuminate\Support\Str::limit($item['description'], 50) }}</p> -->
                         </div>
                     </div>
                 </a>
